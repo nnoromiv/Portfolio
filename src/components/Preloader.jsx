@@ -24,6 +24,7 @@ const Preload = styled.div`
 
 const PreloaderImage = styled.img`
     animation: ${scale} 5s linear infinite;
+    margin: 0 10px 0 120px;
 `
 
 const Preloader = (props) => {
