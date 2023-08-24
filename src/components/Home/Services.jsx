@@ -13,6 +13,10 @@ const Body = styled.div`
     @media screen and (max-width: 769px){
         padding: 40px 20px;
     }
+
+    @media screen and (max-width: 500px){
+        height: 1650px;
+    }
 `
 
 const IntroText = styled.h1`
@@ -55,6 +59,10 @@ const Cards = styled.div`
     gap: 3%;
     align-items: center;
 
+    @media screen and (max-width: 769px){
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column size as needed */
+    }
+
     @media screen and (max-width: 500px){
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust column size as needed */
     }
@@ -62,7 +70,6 @@ const Cards = styled.div`
 
 const DemoButton = styled.h1`
     position: absolute;
-    font-size: 40px;
     border-radius: 150px;
     bottom: 0;
     right: 0;
@@ -78,15 +85,10 @@ const DemoButton = styled.h1`
     }
 
     @media screen and (max-width: 1025px){
-        font-size: 30px;
-        padding: 50px 25px;
         margin: 0 -35px 0 0;
     }
 
     @media screen and (max-width: 500px){
-        border: 10px solid var(--hero-bg-color);
-        padding: 25px 10px;
-        font-size: 20px;
         margin: 0 -1px 0 0;
     }
 `
@@ -104,21 +106,21 @@ const Services = () => {
                 <Card.Body>
                     <Card.Img src={THUMBNAIL} srcSet="" alt="" />
                 </Card.Body>
-                <DemoButton>Go In</DemoButton>
+                <DemoButton></DemoButton>
             </Card>
             <Card className="Orange">
                 <Card.Header>Web Design</Card.Header>
                 <Card.Body>
                     <Card.Img src={THUMBNAIL2} srcSet="" alt="" />
                 </Card.Body>
-                <DemoButton className="Orange">Go In</DemoButton>
+                <DemoButton className="Orange"></DemoButton>
             </Card>
             <Card>
                 <Card.Header>Free Lance Gigs</Card.Header>
                 <Card.Body>
                     <Card.Img src={THUMBNAIL} srcSet="" alt="" />
                 </Card.Body>
-                <DemoButton>Go In</DemoButton>
+                <DemoButton></DemoButton>
             </Card>
         </Cards>
     </Body>
