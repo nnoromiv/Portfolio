@@ -13,10 +13,6 @@ const Body = styled.div`
     @media screen and (max-width: 769px){
         padding: 40px 20px;
     }
-
-    @media screen and (max-width: 500px){
-        height: 1650px;
-    }
 `
 
 const IntroText = styled.h1`
@@ -115,13 +111,13 @@ const Services = () => {
                 </Card.Body>
                 <DemoButton className="Orange"></DemoButton>
             </Card>
-            <Card>
+            {/* <Card>
                 <Card.Header>Free Lance Gigs</Card.Header>
                 <Card.Body>
                     <Card.Img src={THUMBNAIL} srcSet="" alt="" />
                 </Card.Body>
                 <DemoButton></DemoButton>
-            </Card>
+            </Card> */}
         </Cards>
     </Body>
   )
