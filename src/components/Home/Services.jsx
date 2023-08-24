@@ -51,16 +51,15 @@ const Cards = styled.div`
     height: fit-content;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust column size as needed */
-    justify-content: center;
+    place-items: center;
     gap: 3%;
-    align-items: center;
 
     @media screen and (max-width: 769px){
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column size as needed */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important; /* Adjust column size as needed */
     }
 
     @media screen and (max-width: 500px){
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust column size as needed */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important; /* Adjust column size as needed */
     }
 `
 

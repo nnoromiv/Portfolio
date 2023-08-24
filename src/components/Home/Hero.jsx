@@ -3,6 +3,7 @@ import IMAGE from '../../assets/img_2.png'
 import Arrow from '../../assets/arrow.svg'
 import Socials from '../Socials'
 import STAR from '../../assets/star.png'
+import TypeWriting from '../TypeWriting'
 
 const Body = styled.div`
     display: flex;
@@ -177,7 +178,7 @@ const Hero = () => {
         <Body>
             <ArrowImage src={Arrow} srcSet="" alt="pointer" />
             <GreetingCase>Hello!</GreetingCase>
-            <IntroText>I&apos;m <IntroTextSpan>Nnorom,</IntroTextSpan></IntroText>
+            <IntroText><IntroTextSpan><TypeWriting /></IntroTextSpan></IntroText>
             <IntroText> Frontend Engineer</IntroText>
         </Body>
         <InformationContainer>
