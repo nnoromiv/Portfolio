@@ -50,10 +50,14 @@ const Cards = styled.div`
     width: 100%;
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust column size as needed */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust column size as needed */
     justify-content: center;
     gap: 3%;
     align-items: center;
+
+    @media screen and (max-width: 500px){
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust column size as needed */
+    }
 `
 
 const DemoButton = styled.h1`

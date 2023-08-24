@@ -1,7 +1,7 @@
 import './App.css'
 import { useState, useEffect } from 'react'
 import Preloader from './components/Preloader'
-import NavBar from './components/Navbar';
+import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 
 function App() {
