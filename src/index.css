@@ -7,7 +7,7 @@
     --primary-color: #FE4519;
     --navbar-bg-color: #1d1d1d;
     --hero-bg-color: #282828;
-    
+    --inverted-hero-bg-color: #e5e5e5;   
 }
 
 [data-theme="dark"] {
@@ -19,8 +19,11 @@
     --primary-color: #FE4519;
     --navbar-bg-color: #111111;
     --hero-bg-color: #fdfdfd;
+    --inverted-hero-bg-color: #252525;
 }
 
 * {
     transition: all 0.3s ease-in-out;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Rubik', sans-serif;
 }

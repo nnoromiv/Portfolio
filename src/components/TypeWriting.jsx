@@ -1,15 +1,10 @@
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import Typewriter from 'typewriter-effect'
 
-function TypeWriting() {
+function TypeWriting(props) {
   return (
     <Typewriter options={{
-      strings: [
-        "Hi",
-        "My name is",
-        "Nnorom Christian",
-        'Call me Nnorom'
-      ],
+      strings: props.ArrayOfStrings,
       autoStart: true,
       loop: true,
       deleteSpeed: 50
@@ -17,6 +12,8 @@ function TypeWriting() {
   )
 }
 
-// TypeWriting.propTypes = {}
+TypeWriting.propTypes = {
+  ArrayOfStrings: PropTypes.array
+}
 
 export default TypeWriting

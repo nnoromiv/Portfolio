@@ -18,23 +18,27 @@ const ArrowImage = styled.img`
     transform: translate(-90px, 40px) rotate(30deg);
     z-index: -1 
 `
-const GreetingCase = styled.h1`
-    background-color: white;
+export const GreetingCase = styled.h1`
+    background-color: transparent;
     font-size: 20px;
     border: 1px solid black;
     padding: 5px 15px;
     border-radius: 30px;
     width: fit-content;
     margin: 2% 0 0 -7%;
+    cursor: pointer;
 
     @media screen and (max-width: 769px){
         margin: 2% 0 0 -5%;
     }
 `
 
-const IntroText = styled.h1`
+export const IntroText = styled.h1`
     margin: 1% 0 0 0;
     font-size: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 
     @media screen and (max-width: 1025px){
         font-size: 60px;
@@ -45,11 +49,11 @@ const IntroText = styled.h1`
     }
 
     @media screen and (max-width: 426px){
-        font-size: 40px;
+        font-size: 40px !important;
     }
 
-    @media screen and (max-width: 321px){
-        font-size: 30px;
+     @media screen and (max-width: 378px){
+        font-size: 30px !important;
     }
 `
 
@@ -82,7 +86,7 @@ const Apostrophe = styled.strong`
     }
 `
 
-const Text = styled.h6`
+export const Text = styled.h6`
     margin: -45% 0 5% 0;
     font-size: 14px;
     width: 500px;
@@ -172,13 +176,15 @@ const EXPText = styled.h3`
     }
 `
 
+const TypewriterStrings = [ "Hi","My name is", "Nnorom Christian", "Call me Nnorom" ]
+
 const Hero = () => {
   return (
     <>
         <Body>
             <ArrowImage src={Arrow} srcSet="" alt="pointer" />
             <GreetingCase>Hello!</GreetingCase>
-            <IntroText><IntroTextSpan><TypeWriting /></IntroTextSpan></IntroText>
+            <IntroText><IntroTextSpan><TypeWriting ArrayOfStrings={TypewriterStrings} /></IntroTextSpan></IntroText>
             <IntroText> Frontend Engineer</IntroText>
         </Body>
         <InformationContainer>
@@ -188,7 +194,7 @@ const Hero = () => {
                 <Socials />
             </div>
             <ImageContainer>
-                <InnerCircle></InnerCircle>
+                <InnerCircle />
                 <MyImage src={IMAGE} srcSet="" alt="Me" />
             </ImageContainer>
             <ExperienceContainer>
