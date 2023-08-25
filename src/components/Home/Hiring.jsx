@@ -72,7 +72,7 @@ const Hiring = () => {
             <MyImage src={IMAGE} srcSet="" alt="Me" />
         </ImageContainer>
         <TextContainer>
-            <IntroText style={{ display: 'block', textAlign: 'left'}}>Why You<IntroTextSpan> Hire Me</IntroTextSpan> For Your Next Projects?</IntroText>
+            <IntroText style={{ display: 'block', textAlign: 'left'}}>Why You Would<IntroTextSpan> Hire Me</IntroTextSpan> For Your Next Projects?</IntroText>
             <Text style={{ display: 'block', margin: '10px 0 20px 0', width: '100%' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nulla modi nemo ea odit itaque voluptatum molestias? Minima rem, nobis libero voluptates quae eum cupiditate nesciunt laborum doloremque possimus suscipit.</Text>
             <GreetingCase style={{ margin: '0', color: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>Hire Me</GreetingCase>
         </TextContainer>
