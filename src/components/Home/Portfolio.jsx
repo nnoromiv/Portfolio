@@ -5,7 +5,7 @@ import IMG_2 from '../../assets/Thumbnail1.png'
 import { Badge, Carousel, Stack } from "react-bootstrap"
 import {useState} from 'react'
 
-const Header = styled.div`
+export const Header = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;

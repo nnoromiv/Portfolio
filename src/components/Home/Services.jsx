@@ -1,10 +1,12 @@
-import { Card } from "react-bootstrap"
+import { Badge, Card } from "react-bootstrap"
 import THUMBNAIL from "../../assets/Thumbnail.png"
 import THUMBNAIL2 from "../../assets/Thumbnail1.png"
 import { styled } from "styled-components"
 import { IntroTextSpan } from './Hero'
+import PropTypes from 'prop-types'
 
-const Body = styled.div`
+
+export const Body = styled.div`
     padding: 40px;
     background-color: var(--hero-bg-color);
     border-radius: 30px;
@@ -65,11 +67,11 @@ const Cards = styled.div`
 
 const DemoButton = styled.h1`
     position: absolute;
-    border-radius: 150px;
+    border-radius: 50px;
     bottom: 0;
     right: 0;
     border: 20px solid var(--hero-bg-color);
-    padding: 60px 30px;
+    padding: 30px;
     color: white;
     text-align: center;
     background-color: #484848;
@@ -88,6 +90,77 @@ const DemoButton = styled.h1`
     }
 `
 
+const P = styled.p`
+    font-weight: 500;
+
+    @media screen and (max-width: 769px){
+        font-weight: 400;
+    }
+`
+
+const Dot = styled.div`
+    width: 20px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 30px
+`
+
+const CARD_INFORMATION = [
+    {
+        header: 'UI/UX Design',
+        image: THUMBNAIL,
+        className: '',
+    },
+    {
+        header: 'Web Design',
+        image: THUMBNAIL2,
+        className: 'Orange',
+    }
+]
+
+export const LocalCard = props => {
+    return(
+        <Cards>
+        {
+            props.informationInArray.map(cardInfo => {
+                return (
+                    <Card key={cardInfo.header} className={cardInfo.className}>
+                        {
+                            props.Show &&<Card.Header>{cardInfo.header}</Card.Header>
+                        }
+                        <Card.Body>
+                            <Card.Img src={cardInfo.image} srcSet="" alt="" />
+                        </Card.Body>
+                        <Card.ImgOverlay>
+                            <Badge pill variant="secondary" style={{ margin: '0'}}>{cardInfo.badge}</Badge>                            
+                            <Card.Title>{cardInfo.title}</Card.Title>
+                            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                                <div>
+                                    <Dot />
+                                    <P style={{ color: 'var(--inverted-text-color)'}}>{cardInfo.author}</P>
+                                </div>
+                                <div>
+                                <Dot />
+                                    <P style={{ color: 'var(--inverted-text-color)'}}>{cardInfo.date}</P>
+                                </div>
+                            </div>
+
+                        </Card.ImgOverlay>
+                        <DemoButton className={cardInfo.className}></DemoButton>                            
+                    </Card>       
+                )
+            })
+        }        
+        </Cards>
+    )
+}
+
+
+LocalCard.propTypes = {
+    informationInArray: PropTypes.array.isRequired,
+    Show: PropTypes.bool.isRequired
+}
+
 const Services = () => {
   return (
     <Body>
@@ -95,29 +168,7 @@ const Services = () => {
             <IntroText>My<IntroTextSpan> Services</IntroTextSpan></IntroText>
             <HeaderText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum placeat non a, eius id s</HeaderText>
         </HeaderInformation>
-        <Cards>
-            <Card>
-                <Card.Header>UI/UX Design</Card.Header>
-                <Card.Body>
-                    <Card.Img src={THUMBNAIL} srcSet="" alt="" />
-                </Card.Body>
-                <DemoButton></DemoButton>
-            </Card>
-            <Card className="Orange">
-                <Card.Header>Web Design</Card.Header>
-                <Card.Body>
-                    <Card.Img src={THUMBNAIL2} srcSet="" alt="" />
-                </Card.Body>
-                <DemoButton className="Orange"></DemoButton>
-            </Card>
-            {/* <Card>
-                <Card.Header>Free Lance Gigs</Card.Header>
-                <Card.Body>
-                    <Card.Img src={THUMBNAIL} srcSet="" alt="" />
-                </Card.Body>
-                <DemoButton></DemoButton>
-            </Card> */}
-        </Cards>
+        <LocalCard informationInArray={CARD_INFORMATION} Show={true} />
     </Body>
   )
 }

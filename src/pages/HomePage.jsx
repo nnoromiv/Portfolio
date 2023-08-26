@@ -4,6 +4,7 @@ import Services from "../components/Home/Services"
 import WorkExperience from "../components/Home/WorkExperience"
 import Hiring from "../components/Home/Hiring"
 import Portfolio from "../components/Home/Portfolio"
+import Blog from "../components/Home/Blog"
 
 const MarginedBody = styled.div`
     margin: 0 40px;
@@ -26,6 +27,7 @@ const HomePage = () => {
         <MarginedBody>
           <Portfolio />
         </MarginedBody>
+        <Blog />
     </>
   )
 }

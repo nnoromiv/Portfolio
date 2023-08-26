@@ -175,3 +175,7 @@ body{
 .carousel-control-prev-icon {
   background-image: url('./assets/left-arrow.svg');
 }
+
+.card-title {
+  margin: 20px 0
+}
