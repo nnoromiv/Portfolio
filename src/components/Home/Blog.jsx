@@ -29,7 +29,7 @@ const BLOG_INFORMATION = [
 const Blog = () => {
   return (
     <Body>
-        <Header style={{ margin: '0'}}>
+        <Header style={{ margin: '0 0 20px 0'}}>
             <IntroText style={{ display: 'block', textAlign: 'left', color: 'var(--inverted-text-color)'}}>Dive Into My <IntroTextSpan>Portfolio</IntroTextSpan> </IntroText>
             <GreetingCase style={{ margin: '0', height: 'fit-content', color: 'var(--inverted-text-color)', backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)'}}>More</GreetingCase>
         </Header>
