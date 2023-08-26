@@ -134,17 +134,19 @@ export const LocalCard = props => {
                         <Card.ImgOverlay>
                             <Badge pill variant="secondary" style={{ margin: '0'}}>{cardInfo.badge}</Badge>                            
                             <Card.Title>{cardInfo.title}</Card.Title>
-                            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                                <div>
-                                    <Dot />
-                                    <P style={{ color: 'var(--inverted-text-color)'}}>{cardInfo.author}</P>
+                            {
+                                !props.Show &&
+                                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                                    <div>
+                                        <Dot />
+                                        <P style={{ color: 'var(--inverted-text-color)'}}>{cardInfo.author}</P>
+                                    </div>
+                                    <div>
+                                        <Dot />
+                                        <P style={{ color: 'var(--inverted-text-color)'}}>{cardInfo.date}</P>
+                                    </div>
                                 </div>
-                                <div>
-                                <Dot />
-                                    <P style={{ color: 'var(--inverted-text-color)'}}>{cardInfo.date}</P>
-                                </div>
-                            </div>
-
+                            }
                         </Card.ImgOverlay>
                         <DemoButton className={cardInfo.className}></DemoButton>                            
                     </Card>       
