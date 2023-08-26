@@ -151,3 +151,27 @@ body{
   opacity: 0.3; /* Adjust the opacity as needed */
   width: 320px;
 }
+
+.carousel {
+  margin: 30px 0 0 0;
+  width: 100%;
+  height: fit-content;
+}
+
+.carousel-item {
+  border: 10px solid whitesmoke;
+  border-radius: 30px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-image: url('./assets/right-arrow.svg');
+  background-color: var(--primary-color);
+  border: 5px solid whitesmoke;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url('./assets/left-arrow.svg');
+}

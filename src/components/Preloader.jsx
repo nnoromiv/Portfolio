@@ -1,19 +1,7 @@
-import { keyframes, styled } from 'styled-components'
-import Logo from '../assets/logo.svg'
+import { styled } from 'styled-components'
 import PropTypes from 'prop-types'
-import Darkmode from './Darkmode'
+import { Spinner } from 'react-bootstrap'
 
-const scale = keyframes`
-    0% {
-        transform: scale(600%);
-    }
-    50% {
-        transform: scale(400%)
-    }
-    100% {
-        transform: scale(600%);
-    }
-`
 const Preload = styled.div`
     display: flex;
     justify-content: center;
@@ -22,28 +10,14 @@ const Preload = styled.div`
     width: 100vw;
 `
 
-const PreloaderImage = styled.img`
-    animation: ${scale} 5s linear infinite;
-    margin: 0 10px 0 120px;
-`
-
 const Preloader = (props) => {
-    const currentTheme = localStorage.getItem('selectedTheme')
   return (
     <>
         {
-            props.load ? 
-            <Preload>
-                <Darkmode showImage={false} />
-                {
-                    currentTheme === "dark" ?
-                        <PreloaderImage src={Logo} srcSet="" alt="Loading" />
-                    :
-                        <PreloaderImage src={Logo} srcSet="" alt="Loading" />
-                }
+            props.load &&
+            <Preload>               
+                <Spinner animation="grow" style={{ color: 'var(--primary-color)'}}/>
             </Preload>
-            :
-            <></>
         }
     </>
   )

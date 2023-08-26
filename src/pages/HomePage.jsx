@@ -3,6 +3,7 @@ import Hero from "../components/Home/Hero"
 import Services from "../components/Home/Services"
 import WorkExperience from "../components/Home/WorkExperience"
 import Hiring from "../components/Home/Hiring"
+import Portfolio from "../components/Home/Portfolio"
 
 const MarginedBody = styled.div`
     margin: 0 40px;
@@ -22,6 +23,9 @@ const HomePage = () => {
           <WorkExperience />
         </MarginedBody>
         <Hiring />
+        <MarginedBody>
+          <Portfolio />
+        </MarginedBody>
     </>
   )
 }
