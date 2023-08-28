@@ -52,16 +52,16 @@ const Cards = styled.div`
     width: 100%;
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust column size as needed */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     place-items: center;
     gap: 3%;
 
     @media screen and (max-width: 769px){
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important; /* Adjust column size as needed */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
     }
 
     @media screen and (max-width: 500px){
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important; /* Adjust column size as needed */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
     }
 `
 
@@ -110,11 +110,13 @@ const CARD_INFORMATION = [
         header: 'UI/UX Design',
         image: THUMBNAIL,
         className: '',
+        gridColumn: '1/2'
     },
     {
         header: 'Web Design',
         image: THUMBNAIL2,
         className: 'Orange',
+        gridColumn: '2/3'
     }
 ]
 
@@ -124,7 +126,7 @@ export const LocalCard = props => {
         {
             props.informationInArray.map(cardInfo => {
                 return (
-                    <Card key={cardInfo.header} className={cardInfo.className}>
+                    <Card key={cardInfo.header} className={cardInfo.className} style={{ gridColumn: cardInfo.gridColumn }}>
                         {
                             props.Show &&<Card.Header>{cardInfo.header}</Card.Header>
                         }
@@ -160,7 +162,7 @@ export const LocalCard = props => {
 
 LocalCard.propTypes = {
     informationInArray: PropTypes.array.isRequired,
-    Show: PropTypes.bool.isRequired
+    Show: PropTypes.bool.isRequired,
 }
 
 const Services = () => {

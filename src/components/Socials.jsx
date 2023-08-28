@@ -5,9 +5,9 @@ import GITHUBLOGO from '../assets/github-dark.svg'
 
 const Body = styled.div`
     @media screen and (max-width: 769px){
-        width: 100vw;
+        width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
     }
 `
