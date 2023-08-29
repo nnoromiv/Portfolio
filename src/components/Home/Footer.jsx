@@ -76,7 +76,7 @@ const Footer = () => {
             </ol>
         </div>
         </MiddleContainer>
-        <hr style={{color: 'white', marginTop: "10px" }}/>
+        <hr style={{color: 'white', marginTop: '10px' }}/>
         <CopyRight>
             <P>
                 Copyright © 2023 IV. All Rights Reserved
